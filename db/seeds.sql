@@ -19,16 +19,20 @@ VALUES
 ('TECH SUPPORT', 45000, 5),
 ('SALES MANAGER', 110000, 6),
 ('CTO', 200000, 7),
-('CEO', 1000000, 8)
-('ADMIN SUPERVISOR', 88000, 9)
+('CEO', 1000000, 8),
+('ADMIN SUPERVISOR', 88000, 9),
+('CFO', 990000, 10);
 
 
 -- EMPLOYEES
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
 
-('KIM', 'SALAS', 1, 5),
-('LUCKY', 'SALAS', 8, NULL),
-('NEO', 'POLITAN', 6, 2),
-('RAMBO', 'PORTER', 4, 3),
-('POOKAH', 'PONTIPIEDRA', 7, 2);
+('KIM', 'SALAS', 1, 5), --1
+('LUCKY', 'SALAS', 8, NULL), --2
+('NEO', 'POLITAN', 6, 2), --3
+('RAMBO', 'PORTER', 4, 3), --4
+('DOUG', 'DIMMADOME', 7, 2), --5
+('JAMSIN', 'DENA', 9, 3), --6
+('COSMO', 'COSMA', 5,5), --7
+('WANDA', 'FAIRYWINKLE-COSMA', 10, 2); --8
