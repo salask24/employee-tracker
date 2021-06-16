@@ -1,3 +1,4 @@
+-- DEPARTMENT
 INSERT INTO department (name)
 VALUES
 
@@ -7,6 +8,7 @@ VALUES
 ('SALES'), -- 4
 ('CUSTOMER SERVICE'); -- 5
 
+-- ROLE
 INSERT INTO role (title, salary, department_id)
 VALUES
 
@@ -21,7 +23,7 @@ VALUES
 ('ADMIN SUPERVISOR', 88000, 9)
 
 
-
+-- EMPLOYEES
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
 
