@@ -23,3 +23,16 @@ db.connect(err => {
         console.log(`Server running on port ${PORT}`);
     });
 });
+
+// connecting to MySQL 
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '***********',
+    database: 'employee_db'
+})
+connection.connect(err => {
+    if (err) throw err;
+    console.log('connected as id ' + connection.threadId + '\n');
+    startApp();
+});
