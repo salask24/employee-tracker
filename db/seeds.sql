@@ -30,7 +30,7 @@ VALUES
 
 ('KIM', 'SALAS', 1, 5), --1
 ('LUCKY', 'SALAS', 8, NULL), --2
-('NEO', 'POLITAN', 6, 2), --3
+('NEO', 'POLITAN-SALAS', 6, 2), --3
 ('RAMBO', 'PORTER', 4, 3), --4
 ('DOUG', 'DIMMADOME', 7, 2), --5
 ('JAMSIN', 'DENA', 9, 3), --6
