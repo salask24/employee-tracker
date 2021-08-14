@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2/promise');
 require('dotenv').config();
-const { Departments, Roles, Employees } = require('./lib');
+const { Department, Roles, Employees } = require('./lib');
 
 let db;
 
@@ -56,19 +56,19 @@ function mainMenu() {
           break;
 
         case 'View departments':
-          Departments.viewDepartments(db).then(mainMenu);  // return to the action menu
+          Department.viewDepartments(db).then(mainMenu);  // return to the action menu
           break;
 
         case 'View department budget':
-          Departments.viewBudget(db).then(mainMenu);  // return to the action menu
+          Department.viewBudget(db).then(mainMenu);  // return to the action menu
           break;
 
         case 'Add a department':
-          Departments.addDepartment(db).then(mainMenu);  // return to the action menu
+          Department.addDepartment(db).then(mainMenu);  // return to the action menu
           break;
 
         case 'Delete a department':
-          Departments.deleteDepartment(db).then(mainMenu);  // return to the action menu
+          Department.deleteDepartment(db).then(mainMenu);  // return to the action menu
           break;
 
         case 'View roles':
@@ -104,25 +104,6 @@ mysql.createConnection({
     db = conn;
     // console.log('Connected to employees database');
     console.clear();
-    console.log(`
-   ────────────────────────────────────────────────────────────────────────────────────
-   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-   :'########:'##::::'##:'########::'##::::::::'#######::'##:::'##:'########:'########:
-   : ##.....:: ###::'###: ##.... ##: ##:::::::'##.... ##:. ##:'##:: ##.....:: ##.....::
-   : ##::::::: ####'####: ##:::: ##: ##::::::: ##:::: ##::. ####::: ##::::::: ##:::::::
-   : ######::: ## ### ##: ########:: ##::::::: ##:::: ##:::. ##:::: ######::: ######:::
-   : ##...:::: ##. #: ##: ##.....::: ##::::::: ##:::: ##:::: ##:::: ##...:::: ##...::::
-   : ##::::::: ##:.:: ##: ##:::::::: ##::::::: ##:::: ##:::: ##:::: ##::::::: ##:::::::
-   : ########: ##:::: ##: ##:::::::: ########:. #######::::: ##:::: ########: ########:
-   :........::..:::::..::..:::::::::........:::.......::::::..:::::........::........::
-   :::::'##::::'##::::'###::::'##::: ##::::'###:::::'######:::'########:'########::::::
-   ::::: ###::'###:::'## ##::: ###:: ##:::'## ##:::'##... ##:: ##.....:: ##.... ##:::::
-   ::::: ####'####::'##:. ##:: ####: ##::'##:. ##:: ##:::..::: ##::::::: ##:::: ##:::::        
-   ::::: ## ### ##:'##:::. ##: ## ## ##:'##:::. ##: ##::'####: ######::: ########::::::
-   ::::: ##. #: ##: #########: ##. ####: #########: ##::: ##:: ##...:::: ##.. ##:::::::    
-   ::::: ##:.:: ##: ##.... ##: ##:. ###: ##.... ##: ##::: ##:: ##::::::: ##::. ##::::::    
-   ::::: ##:::: ##: ##:::: ##: ##::. ##: ##:::: ##:. ######::: ########: ##:::. ##:::::    
-   ::::: ..:::::..::..:::::..::..::::..::..:::::..:::......::::........::..:::::..:::::
-   ────────────────────────────────────────────────────────────────────────────────────`);
+    console.log(`──────────────\n    Employee Tracker   \n  ──────────────\n`);
     mainMenu();
   });
